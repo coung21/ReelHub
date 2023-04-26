@@ -8,9 +8,14 @@ export default {
       colors: {
         primary: '#ff0000',
         bg: '#0f0f0f',
+        overlay: 'rgba(0, 0, 0, 0.7)'
       },
       fontFamily: {
         montserrat: ['Montserrat', ...defaultTheme.fontFamily.sans],
+      },
+      transitionProperty: {
+        'width': 'width',
+        'height': 'height'
       },
     },
   },
