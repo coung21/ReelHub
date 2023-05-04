@@ -17,7 +17,7 @@ function TopRatedTv() {
   }, []);
   return (
     <>
-      <Catetory moviesList={topTvShows} catetory='Top Rated TV Shows' />
+      <Catetory moviesList={topTvShows} path='tvshow' catetory='Top Rated TV Shows' />
     </>
   );
 }

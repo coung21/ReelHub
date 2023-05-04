@@ -9,7 +9,7 @@ SwiperCore.use([Navigation]);
 
 
 function Catetory(props) {
-  const {catetory, moviesList} = props
+  const {catetory, moviesList, path} = props
 
   const breakpoints = {
     // Hiển thị 3 slide trên viewport nhỏ hơn 640px
@@ -42,8 +42,10 @@ function Catetory(props) {
           {moviesList.map((item, i) => (
             <SwiperSlide key={i}>
               <MovieCard
-                title={item.original_title || item.name}
+                title={item.title || item.name}
                 poster={item.poster_path}
+                path={path}
+                id={item.id}
               />
             </SwiperSlide>
           ))}

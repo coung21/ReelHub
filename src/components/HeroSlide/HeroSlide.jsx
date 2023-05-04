@@ -16,7 +16,7 @@ function HeroSlide() {
       );
       const data = await response.json();
       setMovies(data.results.slice(0, 6));
-      console.log(data.results.slice(0, 6));
+      // console.log(data.results.slice(0, 6));
     };
     getPopularMovies();
   }, []);

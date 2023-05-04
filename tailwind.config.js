@@ -8,7 +8,7 @@ export default {
       colors: {
         primary: '#ff0000',
         bg: '#0f0f0f',
-        overlay: 'rgba(0, 0, 0, 0.7)'
+        overlay: 'rgba(0, 0, 0, 0.8)'
       },
       fontFamily: {
         montserrat: ['Montserrat', ...defaultTheme.fontFamily.sans],
