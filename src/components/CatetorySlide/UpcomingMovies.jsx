@@ -15,7 +15,7 @@ function UpcomingMovies() {
   }, [])
   return (
     <>
-      <Catetory moviesList={upcomingList} catetory='Upcoming Movies'/>
+      <Catetory moviesList={upcomingList} path='movie' catetory='Upcoming Movies'/>
     </>
   )
 }

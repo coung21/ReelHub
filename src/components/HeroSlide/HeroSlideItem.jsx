@@ -9,7 +9,6 @@ function HeroSlideItem({ background, title, overview, poster }) {
       bg-no-repeat
       bg-cover
       bg-center 
-      relative 
       h-screen 
       before:content-[""] 
       before:absolute 
@@ -38,12 +37,24 @@ function HeroSlideItem({ background, title, overview, poster }) {
             {overview}
           </div>
           <div className='mt-7 md:mt-12 flex justify-center md:justify-start gap-5'>
-            <Button className={'bg-primary hover:shadow-primary hover:shadow-sm'}>Details</Button>
-            <Button className={'bg-transparent border-2 border-white'}>Trailer</Button>
+            <Button
+              className={
+                'bg-primary hover:shadow-primary text-xl hover:shadow-sm'
+              }
+            >
+              Details
+            </Button>
+            <Button className={'bg-transparent border-2 border-white text-xl'}>
+              Trailer
+            </Button>
           </div>
         </div>
         <div className='md:flex-1 flex justify-center items-start'>
-          <img src={`https://image.tmdb.org/t/p/w500${poster}`} alt='' className='hidden md:inline-block w-80 rounded-xl drop-shadow-2xl'/>
+          <img
+            src={`https://image.tmdb.org/t/p/w500${poster}`}
+            alt=''
+            className='hidden md:inline-block w-80 rounded-xl drop-shadow-2xl'
+          />
         </div>
       </div>
     </div>
