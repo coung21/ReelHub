@@ -10,7 +10,7 @@ function HeroSlide() {
   useEffect(() => {
     const getPopularMovies = async () => {
       const response = await fetch(
-        `https://api.themoviedb.org/3/movie/popular?api_key=${
+        `https://api.themoviedb.org/3/trending/movie/day?api_key=${
           import.meta.env.VITE_TMDB_KEY
         }&language=en-US&page=1`
       );

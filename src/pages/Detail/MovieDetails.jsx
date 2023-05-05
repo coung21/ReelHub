@@ -93,6 +93,7 @@ function MovieDetails() {
       </div>
 
       <div className='md:px-20 px-2 mt-[100px]'>
+        <h2 className='text-white font-montserrat font-bold text-xl mb-[20px] ml-4'>Trailer</h2>
         <Trailers id={data.id} />
       </div>
 
