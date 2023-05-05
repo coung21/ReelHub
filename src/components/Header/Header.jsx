@@ -5,9 +5,9 @@ import Button from '../Button/Button'
 
 function Header() {
   return (
-    <div className='bg-transparent w-full h-20 sm:h-24 fixed z-50 flex justify-between items-center'>
+    <div className='bg-transparent w-full h-16 sm:h-24 fixed z-50 flex justify-between items-center'>
       <div className='items-center gap-2 ml-6 md:ml-20 hover:cursor-pointer'>
-        <img src={logo2} alt='logo' className='w-14 h-14' />
+        <img src={logo2} alt='logo' className='w-14 h-14 inline-block mr-0 md:mr  -2' />
         <h1 className='text-white font-montserrat text-xl font-bold hidden sm:inline'>
           ReelHub
         </h1>
