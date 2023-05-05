@@ -18,7 +18,7 @@ function MovieCard(props) {
             alt=''
           />
         </div>
-        <h3 className='text-center text-white font-montserrat text-md font-semibold mt-2'>
+        <h3 className='text-center text-white font-montserrat text-md font-semibold mt-1 overflow-hidden'>
           {title}
         </h3>
       </Link>
