@@ -8,10 +8,7 @@ function MovieCard(props) {
       className='hover:cursor-pointer duration-300 hover:scale-95'
     >
       <Link to={`${path}/${id}`}>
-        <div
-          className='
-      inline-block'
-        >
+        <div className='inline-block'>
           <img
             className='rounded-xl'
             src={`https://image.tmdb.org/t/p/w400${poster}`}

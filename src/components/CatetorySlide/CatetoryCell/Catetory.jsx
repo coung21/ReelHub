@@ -1,11 +1,9 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation } from 'swiper';
 import 'swiper/css'
 import SmallButton from '../../Button/SmallButton';
 import MovieCard from '../../MovieCard/MovieCard';
 
-SwiperCore.use([Navigation]);
 
 
 function Catetory(props) {
@@ -32,13 +30,13 @@ function Catetory(props) {
   return (
     <div className='w-full mb-9'>
       <div className='block w-full flex justify-between items-center'>
-        <h2 className='text-white font-montserrat font-semibold text-xl'>
+        <h2 className='text-white font-montserrat font-semibold text-xl relative ml-4 before:content-[""] before:absolute before:h-full before:w-1 before:bg-primary before:left-[-1rem]'>
           {catetory}
         </h2>
         <SmallButton>View More</SmallButton>
       </div>
       <div className='w-full mt-4'>
-        <Swiper spaceBetween={15} breakpoints={breakpoints} slidesPerView={2} navigation>
+        <Swiper spaceBetween={15} breakpoints={breakpoints} slidesPerView={4}>
           {moviesList.map((item, i) => (
             <SwiperSlide key={i}>
               <MovieCard

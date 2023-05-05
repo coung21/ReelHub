@@ -1,7 +1,9 @@
 import React, {useEffect} from 'react'
 import { useLoaderData } from 'react-router-dom'
-import { BsStarHalf } from 'react-icons/bs';
+import { SiImdb } from 'react-icons/si';
 import minTohr from '../../utils/minTohr'
+import CastList from '../../components/Details/CastList';
+import Trailers from '../../components/Details/Trailers';
 
 function MovieDetails() {
   const data = useLoaderData()
@@ -9,7 +11,7 @@ function MovieDetails() {
   useEffect(() => {
     window.scrollTo(0,0)
   },[])
-  console.log(data)
+  // console.log(data)
   return (
     <>
       <div
@@ -67,7 +69,7 @@ function MovieDetails() {
             ))}
           </p>
           <div className='mb-4'>
-            <BsStarHalf color='yellow' size={20} className='inline' />
+            <SiImdb color='yellow' size={25} className='inline' />
             <span className='ml-2 text-white text-xl font-semibold opacity-100'>
               {data.vote_average}
               <span className='text-sm opacity-50'>/10</span>
@@ -77,8 +79,23 @@ function MovieDetails() {
           <p className='font-montserrat text-md md:leading-normal text-white mb-9 md:px-8'>
             {data.overview}
           </p>
+
+          <div className=''>
+            <h2 className='text-white text-lg font-semibold font-montserrat mb-2'>
+              Casts
+            </h2>
+            <CastList id={data.id} />
+          </div>
         </div>
       </div>
+
+        <div className='md:px-20 px-2 mt-[100px]'>
+            <Trailers id={data.id}/>
+        </div>
+
+        <div className=''>
+
+        </div>
     </>
   );
 }
