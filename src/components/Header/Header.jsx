@@ -28,7 +28,7 @@ function Header() {
         </li>
         <li className=''>
           <NavLink
-            to={'movie'}
+            to={'/movie'}
             className={({ isActive }) =>
               isActive
                 ? 'text-primary'
@@ -41,7 +41,7 @@ function Header() {
         </li>
         <li className=''>
           <NavLink
-            to={'tvshow'}
+            to={'/tvshow'}
             className={({ isActive }) =>
               isActive
                 ? 'text-primary'

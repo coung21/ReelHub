@@ -3,14 +3,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import placeholder from '../../../public/placeholder3.png'
 
-function CastList({id}) {
+function CastList({id, path}) {
   
   const [casts, setCasts] = useState([])
 
   useEffect(() => {
     const fetchCast = async () => {
       const resposne = await fetch(
-        `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${import.meta.env.VITE_TMDB_KEY}&language=en-US`
+        `https://api.themoviedb.org/3/${path}/${id}/credits?api_key=${import.meta.env.VITE_TMDB_KEY}&language=en-US`
       );
       const data = await resposne.json()
       setCasts(data.cast)
@@ -39,7 +39,7 @@ function CastList({id}) {
 
   return (
     <Swiper spaceBetween={10} slidesPerView={4} breakpoints={breakpoints}>
-      {casts.map((item) => (
+      {casts ? casts.map((item) => (
         <SwiperSlide key={item.id}>
           <div>
             <div className='inline-block'>
@@ -58,7 +58,7 @@ function CastList({id}) {
             <p className='text-white text-center font-montserrat text-xs opacity-50'>{item.character}</p>
           </div>
         </SwiperSlide>
-      ))}
+      )) : ''}
     </Swiper>
   );
 }

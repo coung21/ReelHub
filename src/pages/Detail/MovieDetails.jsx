@@ -4,13 +4,14 @@ import { SiImdb } from 'react-icons/si';
 import minTohr from '../../utils/minTohr'
 import CastList from '../../components/Details/CastList';
 import Trailers from '../../components/Details/Trailers';
+import Similar from '../../components/Details/Similar';
 
 function MovieDetails() {
   const data = useLoaderData()
 
   useEffect(() => {
     window.scrollTo(0,0)
-  },[])
+  },[data])
   // console.log(data)
   return (
     <>
@@ -44,7 +45,9 @@ function MovieDetails() {
         <div className='flex-1'>
           <div
             style={{
-              backgroundImage: `url('https://image.tmdb.org/t/p/original${data.poster_path}')`,
+              backgroundImage: data.poster_path
+                ? `url('https://image.tmdb.org/t/p/original${data.poster_path}')`
+                : `url('https://cringemdb.com/img/movie-poster-placeholder.png')`,
             }}
             className='bg-center bg-no-repeat bg-cover rounded-xl pt-[165%]'
           ></div>
@@ -84,18 +87,18 @@ function MovieDetails() {
             <h2 className='text-white text-lg font-semibold font-montserrat mb-2'>
               Casts
             </h2>
-            <CastList id={data.id} />
+            <CastList id={data.id} path='movie'/>
           </div>
         </div>
       </div>
 
-        <div className='md:px-20 px-2 mt-[100px]'>
-            <Trailers id={data.id}/>
-        </div>
+      <div className='md:px-20 px-2 mt-[100px]'>
+        <Trailers id={data.id} />
+      </div>
 
-        <div className=''>
-
-        </div>
+      <div className='md:px-20 px-2 mt-[100px]'>
+        <Similar id={data.id} />
+      </div>
     </>
   );
 }

@@ -5,8 +5,8 @@ import Header from './components/Header/Header'
 import MoviesPage from './pages/MoviesPage';
 import TVShowPage from './pages/TVShowPage';
 import RootLayout from './pages/RootLayout';
-import Movie, {loader as getDetail} from './pages/Detail/MovieDetails';
-import Tv from './pages/Detail/TvDetails';
+import Movie, {loader as getMovieDetail} from './pages/Detail/MovieDetails';
+import Tv, {loader as getTvDetail} from './pages/Detail/TvDetails';
 
 const router = createBrowserRouter([
   {
@@ -18,16 +18,16 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: 'movie',
+        path: '/movie',
         children: [
           {
             index: true,
             element: <MoviesPage />,
           },
           {
-            path: ':id',
+            path: '/movie/:id',
             element: <Movie />,
-            loader: getDetail
+            loader: getMovieDetail
           }
         ]
       },
@@ -39,9 +39,9 @@ const router = createBrowserRouter([
             element: <TVShowPage />,
           },
           {
-            path: ':id',
+            path: '/tvshow/:id',
             element: <Tv />,
-            loader: getDetail
+            loader: getTvDetail
           }
         ]
       }

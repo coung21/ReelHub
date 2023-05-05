@@ -8,7 +8,7 @@ function Trailers({id}) {
           `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${import.meta.env.VITE_TMDB_KEY}&language=en-US`
         );
         const data = await response.json();
-        const trailers = data.results.find((movie) => movie.site === 'YouTube' && movie.type === 'Trailer' || movie.type === 'Teaser');
+        const trailers = data.results.find((movie) => movie.site === 'YouTube' && (movie.type === 'Trailer' || movie.type === 'Teaser'));
         console.log(trailers)
         setTrailer(trailers.key);
     }

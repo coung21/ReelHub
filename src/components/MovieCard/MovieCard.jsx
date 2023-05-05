@@ -1,17 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import placeholder from '../../../public/movieph.png'
 
 function MovieCard(props) {
   const { title, poster, path, id } = props;
   return (
-    <button
-      className='hover:cursor-pointer duration-300 hover:scale-95'
-    >
-      <Link to={`${path}/${id}`}>
+    <button className='hover:cursor-pointer duration-300 hover:scale-95'>
+      <Link to={`/${path}/${id}`}>
         <div className='inline-block'>
           <img
             className='rounded-xl'
-            src={`https://image.tmdb.org/t/p/w400${poster}`}
+            src={
+              poster
+                ? `https://image.tmdb.org/t/p/original${poster}`
+                : placeholder
+            }
             alt=''
           />
         </div>

@@ -37,7 +37,7 @@ function Catetory(props) {
       </div>
       <div className='w-full mt-4'>
         <Swiper spaceBetween={15} breakpoints={breakpoints} slidesPerView={4}>
-          {moviesList.map((item, i) => (
+          {moviesList ? moviesList.map((item, i) => (
             <SwiperSlide key={i}>
               <MovieCard
                 title={item.title || item.name}
@@ -46,7 +46,7 @@ function Catetory(props) {
                 id={item.id}
               />
             </SwiperSlide>
-          ))}
+          )) : ''}
         </Swiper>
       </div>
     </div>
