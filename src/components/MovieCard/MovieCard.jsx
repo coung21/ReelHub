@@ -12,13 +12,13 @@ function MovieCard(props) {
             className='rounded-xl'
             src={
               poster
-                ? `https://image.tmdb.org/t/p/original${poster}`
+                ? `https://image.tmdb.org/t/p/w400${poster}`
                 : placeholder
             }
             alt=''
           />
         </div>
-        <h3 className='text-center text-white font-montserrat text-md font-semibold mt-1 overflow-hidden'>
+        <h3 className='text-center text-white font-montserrat text-sm font-semibold mt-1 overflow-hidden'>
           {title}
         </h3>
       </Link>

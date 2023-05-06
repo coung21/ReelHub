@@ -37,6 +37,7 @@ function HeroSlide() {
               title={item.original_title}
               overview={item.overview}
               poster={item.poster_path}
+              id={item.id}
             />
           </SwiperSlide>
         ))}

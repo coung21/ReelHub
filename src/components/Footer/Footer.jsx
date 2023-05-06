@@ -35,7 +35,7 @@ function Footer() {
         <div className='flex flex-col text-white font-montserrat font-semibold font-xl gap-y-5'>
           <Link className='hover:underline' to={'/'}>Live</Link>
           <Link className='hover:underline' to={'/'}>FAQ</Link>
-          <Link className='hover:underline' to={'/'}>Live</Link>
+          <Link className='hover:underline' to={'/'}>Contributors</Link>
           <Link className='hover:underline' to={'/'}>Privacy policy</Link>
         </div>
       </div>

@@ -9,7 +9,7 @@ function Trailers({id}) {
         );
         const data = await response.json();
         const trailers = data.results.find((movie) => movie.site === 'YouTube' && (movie.type === 'Trailer' || movie.type === 'Teaser'));
-        console.log(trailers)
+        // console.log(trailers)
         setTrailer(trailers.key);
     }
     fetchVideo()

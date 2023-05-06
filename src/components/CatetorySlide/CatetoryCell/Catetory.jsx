@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'
 import SmallButton from '../../Button/SmallButton';
 import MovieCard from '../../MovieCard/MovieCard';
+import { Link } from 'react-router-dom';
 
 
 
@@ -33,7 +34,7 @@ function Catetory(props) {
         <h2 className='text-white font-montserrat font-semibold text-xl relative ml-4 before:content-[""] before:absolute before:h-full before:w-1 before:bg-primary before:left-[-1rem]'>
           {catetory}
         </h2>
-        <SmallButton>View More</SmallButton>
+        <SmallButton><Link to={`/${path}`}>View More</Link></SmallButton>
       </div>
       <div className='w-full mt-4'>
         <Swiper spaceBetween={15} breakpoints={breakpoints} slidesPerView={4}>

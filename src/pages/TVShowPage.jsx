@@ -71,7 +71,7 @@ function TVShowPage() {
           />
         ))}
       </div>
-      {page < 4 ? (
+      {page < 6 ? (
         <div className='w-full flex items-center justify-center my-5'>
           <button
             className='text-white bg-transparent border-white border-2 px-3 py-2 rounded-md mx-auto'
