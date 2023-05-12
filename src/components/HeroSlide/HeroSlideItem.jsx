@@ -1,12 +1,30 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
-import { useToggle } from '../../context/backdropProvider';
-import BackdropWrapper from '../Backdrop/BackdropWrapper';
-import Trailers from '../Details/Trailers';
+
 
 function HeroSlideItem({ background, title, overview, poster, id }) {
-  const toggleBackdrop = useToggle();
+
+  const [ytTrailer, setYtTrailer] = useState('');
+  useEffect(() => {
+    const fetchVideo = async () => {
+      const response = await fetch(
+        `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${
+          import.meta.env.VITE_TMDB_KEY
+        }&language=en-US`
+      );
+      const data = await response.json();
+      const trailers = data.results.find(
+        (movie) =>
+          movie.site === 'YouTube' &&
+          (movie.type === 'Trailer' || movie.type === 'Teaser')
+      );
+      // console.log(trailers)
+      setYtTrailer(trailers.key);
+    };
+    fetchVideo();
+  }, []);
+
   return (
     <>
       <div
@@ -53,15 +71,13 @@ function HeroSlideItem({ background, title, overview, poster, id }) {
               <Button
                 className={'bg-transparent border-2 border-white text-xl'}
               >
-                Trailer
+                <a
+                  href={`https://www.youtube.com/watch?v=${ytTrailer}`}
+                  target='_blank'
+                >
+                  Trailer
+                </a>
               </Button>
-
-              {/* <Button
-                className={'bg-transparent border-2 border-white text-xl'}
-                clickEvent={toggleBackdrop}
-              >
-                Trailer
-              </Button> */}
             </div>
           </div>
           <div className='md:flex-1 flex justify-center items-start'>
@@ -73,13 +89,6 @@ function HeroSlideItem({ background, title, overview, poster, id }) {
           </div>
         </div>
       </div>
-
-      {/* Bug: */}
-      {/* <BackdropWrapper>
-        <div className='bg-black w-full h-full'>
-        <Trailers id={id} />
-        </div>
-      </BackdropWrapper> */}
     </>
   );
 }

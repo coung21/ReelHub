@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import logo2 from '../../../public/logo2.png';
-import { NavLink } from 'react-router-dom';
-import Button from '../Button/Button'
+import { NavLink, Link } from 'react-router-dom';
+
 
 function Header() {
   const [trans, setTrans] = useState('')
@@ -9,7 +9,7 @@ function Header() {
     function handleScroll(){
       if(window.scrollY >= 200){
         setTrans(
-          'transition-all duration-600 bg-bg'
+          'transition-all duration-700 bg-bg'
         );
       } else {
         setTrans('')
@@ -24,10 +24,12 @@ function Header() {
   return (
     <div className={`${trans} w-full h-16 sm:h-24 fixed z-50 flex justify-between items-center`}>
       <div className='items-center gap-2 ml-6 md:ml-20 hover:cursor-pointer'>
+        <Link to='/'>
         <img src={logo2} alt='logo' className='w-14 h-14 inline-block mr-0 md:mr  -2' />
         <h1 className='text-white font-montserrat text-xl font-bold hidden sm:inline'>
           ReelHub
         </h1>
+        </Link>
       </div>
       <ul className='flex text-white text-sm sm:text-lg font-montserrat font-semibold gap-4 sm:gap-7 mr-6 md:mr-20'>
         <li className=''>
