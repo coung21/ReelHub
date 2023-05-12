@@ -19,13 +19,13 @@ To run RealHub on your local machine, follow these step:
 1. Clone the repository:
 
 ```bash
-  git clone https://github.com/coung21/weather-app-terminal.git
+  git clone https://github.com/coung21/ReelHub
 ```
 
 2. Go to the project directory
 
 ```bash
-  cd weather-app
+  cd reelhub
 ```
 
 3. Install dependencies using npm
