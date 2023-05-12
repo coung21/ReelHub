@@ -15,7 +15,7 @@ RealHub is a web application built with ReactJs that allows users to browse movi
 
 ## Getting Started
 
-To run RealHub on your local machine, follow these step:
+To run RealHub on your local machine, you have to install Nodejs and follow these step:
 1. Clone the repository:
 
 ```bash
