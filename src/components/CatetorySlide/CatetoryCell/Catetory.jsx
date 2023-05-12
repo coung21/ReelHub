@@ -30,7 +30,7 @@ function Catetory(props) {
 
   return (
     <div className='w-full mb-9'>
-      <div className='block w-full flex justify-between items-center'>
+      <div className='w-full flex justify-between items-center'>
         <h2 className='text-white font-montserrat font-semibold text-xl relative ml-4 before:content-[""] before:absolute before:h-full before:w-1 before:bg-primary before:left-[-1rem]'>
           {catetory}
         </h2>
