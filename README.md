@@ -3,19 +3,17 @@
 
 ReelHub is a web application built with ReactJs that allows users to browse movies and TV shows, and view details such as ratings, trailer, synotsis, etc. It uses *[TMDB API](https://www.themoviedb.org/)*
 
-
-## Technologies
-
-![react](https://github.com/coung21/ReelHub/assets/120638231/cc932e8f-519e-4664-8bfc-7d32f665a918)
-![react-router (1)](https://github.com/coung21/ReelHub/assets/120638231/e93fa2fe-a1a1-4d2b-b100-536865b40a25)
-![tailwindcss-icon](https://github.com/coung21/ReelHub/assets/120638231/c2d4b05d-3577-48d0-a599-8adff223cec1)
-
 ## Features
 
 - Browse popular movies and TV shows
 - View details about movies and TV shows, including release date, synotsis, ratings, cast and more
 - Responsive design that looks great on desktop and mobile devices
 
+## Technologies
+
+![react](https://github.com/coung21/ReelHub/assets/120638231/cc932e8f-519e-4664-8bfc-7d32f665a918)
+![react-router (1)](https://github.com/coung21/ReelHub/assets/120638231/e93fa2fe-a1a1-4d2b-b100-536865b40a25)
+![tailwindcss-icon](https://github.com/coung21/ReelHub/assets/120638231/c2d4b05d-3577-48d0-a599-8adff223cec1)
 
 ## Getting Started
 
