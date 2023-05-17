@@ -1,9 +1,12 @@
 
-# 📽 RealHub
+# 📽 ReelHub
 
-RealHub is a web application built with ReactJs that allows users to browse movies and TV shows, and view details such as ratings, trailer, synotsis, etc. It uses *[TMDB API](https://www.themoviedb.org/)*
+ReelHub is a web application built with ReactJs that allows users to browse movies and TV shows, and view details such as ratings, trailer, synotsis, etc. It uses *[TMDB API](https://www.themoviedb.org/)*
 
 
+## Technologies
+
+![react](https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png) ![react-router (1)](https://github.com/coung21/ReelHub/assets/120638231/e93fa2fe-a1a1-4d2b-b100-536865b40a25) ![tailwind](https://user-images.githubusercontent.com/25181517/202896760-337261ed-ee92-4979-84c4-d4b829c7355d.png)
 
 
 ## Features
