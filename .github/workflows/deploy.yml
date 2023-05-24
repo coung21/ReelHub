@@ -38,9 +38,9 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build
-        run: |
-          echo "VITE_TMDB_KEY=${{ secrets.VITE_TMDB_KEY }}" >> .env.production
-          npm run build
+        run: npm run build
+      - name: Create .env file
+        run: echo "VITE_TMDB_KEY=${{ secrets.VITE_TMDB_KEY }}" > .env
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
