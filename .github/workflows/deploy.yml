@@ -8,7 +8,7 @@ on:
 env:
   VITE_TMDB_KEY: ${{ secrets.VITE_TMDB_KEY }}
 
-jobs:# Simple workflow for deploying static content to GitHub Pages
+jobs: Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
