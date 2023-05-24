@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import {} from '../../public/bg.jpg';
 import MovieCard from '../components/MovieCard/MovieCard';
 
 function MoviesPage() {
@@ -51,7 +50,7 @@ function MoviesPage() {
       after:h-[100px]
       after:bg-gradient-to-t from-bg to-transparent'
         style={{
-          backgroundImage: `url('../../public/bg.jpg')`,
+          backgroundImage: `url('src/assets/bg.jpg')`,
         }}
       >
         <div className='h-full w-full flex items-center justify-center relative'>

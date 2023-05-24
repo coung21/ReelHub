@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import placeholder from '/movieph.png'
+import placeholder from '../../assets/movieph.png'
 
 function MovieCard(props) {
   const { title, poster, path, id } = props;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import placeholder from '../../../public/placeholder3.png'
+import placeholder from '../../assets/placeholder3.png';
 
 function CastList({id, path}) {
   

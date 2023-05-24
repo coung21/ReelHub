@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo2 from '../../../public/logo2.png';
+import logo2 from '../../assets/logo2.png';
 import { NavLink, Link } from 'react-router-dom';
 
 
