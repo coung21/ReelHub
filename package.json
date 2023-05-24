@@ -1,6 +1,7 @@
 {
   "name": "reelhub",
-  "private": true,
+  "homepage": "https://coung21.github.io/ReelHub/",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
