@@ -10,6 +10,7 @@ import Tv, {loader as getTvDetail} from './pages/Detail/TvDetails';
 
 const router = createBrowserRouter([
   {
+    
     path: '/ReelHub',
     element: <RootLayout />,
     children: [
@@ -47,7 +48,7 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+],);
 
 function App() {
   return <RouterProvider router={router}/>
