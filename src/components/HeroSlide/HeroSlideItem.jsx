@@ -66,7 +66,7 @@ function HeroSlideItem({ background, title, overview, poster, id }) {
                   'bg-primary hover:shadow-primary text-xl hover:shadow-sm'
                 }
               >
-                <Link to={`/movie/${id}`}>Details</Link>
+                <Link to={`/ReelHub/movie/${id}`}>Details</Link>
               </Button>
               <Button
                 className={'bg-transparent border-2 border-white text-xl'}

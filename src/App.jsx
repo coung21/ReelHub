@@ -15,39 +15,39 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />
+        element: <Home />,
       },
       {
-        path: '/movie',
+        path: '/ReelHub/movie',
         children: [
           {
             index: true,
             element: <MoviesPage />,
           },
           {
-            path: '/movie/:id',
+            path: '/ReelHub/movie/:id',
             element: <Movie />,
-            loader: getMovieDetail
-          }
-        ]
+            loader: getMovieDetail,
+          },
+        ],
       },
       {
-        path: 'tvshow',
+        path: '/ReelHub/tvshow',
         children: [
           {
             index: true,
             element: <TVShowPage />,
           },
           {
-            path: '/tvshow/:id',
+            path: '/ReelHub/tvshow/:id',
             element: <Tv />,
-            loader: getTvDetail
-          }
-        ]
-      }
-    ]
-  }
-])
+            loader: getTvDetail,
+          },
+        ],
+      },
+    ],
+  },
+]);
 
 function App() {
   return <RouterProvider router={router}/>

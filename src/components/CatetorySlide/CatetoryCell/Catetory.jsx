@@ -34,20 +34,24 @@ function Catetory(props) {
         <h2 className='text-white font-montserrat font-semibold text-xl relative ml-4 before:content-[""] before:absolute before:h-full before:w-1 before:bg-primary before:left-[-1rem]'>
           {catetory}
         </h2>
-        <SmallButton><Link to={`/${path}`}>View More</Link></SmallButton>
+        <SmallButton>
+          <Link to={`/ReelHub/${path}`}>View More</Link>
+        </SmallButton>
       </div>
       <div className='w-full mt-4'>
         <Swiper spaceBetween={15} breakpoints={breakpoints} slidesPerView={4}>
-          {moviesList ? moviesList.map((item, i) => (
-            <SwiperSlide key={i}>
-              <MovieCard
-                title={item.title || item.name}
-                poster={item.poster_path}
-                path={path}
-                id={item.id}
-              />
-            </SwiperSlide>
-          )) : ''}
+          {moviesList
+            ? moviesList.map((item, i) => (
+                <SwiperSlide key={i}>
+                  <MovieCard
+                    title={item.title || item.name}
+                    poster={item.poster_path}
+                    path={path}
+                    id={item.id}
+                  />
+                </SwiperSlide>
+              ))
+            : ''}
         </Swiper>
       </div>
     </div>

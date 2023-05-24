@@ -6,14 +6,12 @@ function MovieCard(props) {
   const { title, poster, path, id } = props;
   return (
     <button className='hover:cursor-pointer duration-300 hover:scale-95'>
-      <Link to={`/${path}/${id}`}>
+      <Link to={`/ReelHub/${path}/${id}`}>
         <div className='inline-block'>
           <img
             className='rounded-xl'
             src={
-              poster
-                ? `https://image.tmdb.org/t/p/w400${poster}`
-                : placeholder
+              poster ? `https://image.tmdb.org/t/p/w400${poster}` : placeholder
             }
             alt=''
           />

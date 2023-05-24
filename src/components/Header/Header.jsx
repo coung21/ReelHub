@@ -22,19 +22,25 @@ function Header() {
     }
   }, [])
   return (
-    <div className={`${trans} w-full h-16 sm:h-24 fixed z-50 flex justify-between items-center`}>
+    <div
+      className={`${trans} w-full h-16 sm:h-24 fixed z-50 flex justify-between items-center`}
+    >
       <div className='items-center gap-2 ml-6 md:ml-20 hover:cursor-pointer'>
-        <Link to='/'>
-        <img src={logo2} alt='logo' className='w-14 h-14 inline-block mr-0 md:mr  -2' />
-        <h1 className='text-white font-montserrat text-xl font-bold hidden sm:inline'>
-          ReelHub
-        </h1>
+        <Link to='/ReelHub'>
+          <img
+            src={logo2}
+            alt='logo'
+            className='w-14 h-14 inline-block mr-0 md:mr  -2'
+          />
+          <h1 className='text-white font-montserrat text-xl font-bold hidden sm:inline'>
+            ReelHub
+          </h1>
         </Link>
       </div>
       <ul className='flex text-white text-sm sm:text-lg font-montserrat font-semibold gap-4 sm:gap-7 mr-6 md:mr-20'>
         <li className=''>
           <NavLink
-            to={'/'}
+            to={'/ReelHub'}
             className={({ isActive }) =>
               isActive
                 ? 'text-primary'
@@ -47,7 +53,7 @@ function Header() {
         </li>
         <li className=''>
           <NavLink
-            to={'/movie'}
+            to={'/ReelHub/movie'}
             className={({ isActive }) =>
               isActive
                 ? 'text-primary'
@@ -60,7 +66,7 @@ function Header() {
         </li>
         <li className=''>
           <NavLink
-            to={'/tvshow'}
+            to={'/ReelHub/tvshow'}
             className={({ isActive }) =>
               isActive
                 ? 'text-primary'
