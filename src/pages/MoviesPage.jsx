@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import MovieCard from '../components/MovieCard/MovieCard';
+import background from '../assets/bg.jpg';
 
 function MoviesPage() {
   const [movieList, setMovieList] = useState([]);
@@ -50,7 +51,7 @@ function MoviesPage() {
       after:h-[100px]
       after:bg-gradient-to-t from-bg to-transparent'
         style={{
-          backgroundImage: `url('src/assets/bg.jpg')`,
+          backgroundImage: `url(${background})`,
         }}
       >
         <div className='h-full w-full flex items-center justify-center relative'>
