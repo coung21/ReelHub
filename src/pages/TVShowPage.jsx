@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import MovieCard from '../components/MovieCard/MovieCard';
-import background from '../assets/bg.jpg' 
 
 function TVShowPage() {
   const [tvList, setTvList] = useState([]);
@@ -51,7 +50,7 @@ function TVShowPage() {
       after:h-[100px]
       after:bg-gradient-to-t from-bg to-transparent'
         style={{
-          backgroundImage: `url(${background})`,
+          backgroundImage: `url('/ReelHub/src/assets/bg.jpg')`,
         }}
       >
         <div className='h-full w-full flex items-center justify-center relative'>

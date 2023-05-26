@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import MovieCard from '../components/MovieCard/MovieCard';
-import background from '../assets/bg.jpg';
 
 function MoviesPage() {
   const [movieList, setMovieList] = useState([]);
@@ -51,7 +50,7 @@ function MoviesPage() {
       after:h-[100px]
       after:bg-gradient-to-t from-bg to-transparent'
         style={{
-          backgroundImage: `url(${background})`,
+          backgroundImage: `url('/ReelHub/src/assets/bg.jpg')`,
         }}
       >
         <div className='h-full w-full flex items-center justify-center relative'>
@@ -73,14 +72,14 @@ function MoviesPage() {
         ))}
       </div>
       {page < 6 ? (
-      <div className='w-full flex items-center justify-center my-5'>
-        <button
-          className='text-white bg-transparent border-white border-2 px-3 py-2 rounded-md mx-auto'
-          onClick={loadMoreHanlder}
-        >
-          Loade More
-        </button>
-      </div>
+        <div className='w-full flex items-center justify-center my-5'>
+          <button
+            className='text-white bg-transparent border-white border-2 px-3 py-2 rounded-md mx-auto'
+            onClick={loadMoreHanlder}
+          >
+            Loade More
+          </button>
+        </div>
       ) : null}
     </>
   );
