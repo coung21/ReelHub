@@ -48,7 +48,7 @@ const router = createBrowserRouter([
       },
     ],
   },
-],);
+],{basename: '/ReelHub'});
 
 function App() {
   return <RouterProvider router={router}/>
