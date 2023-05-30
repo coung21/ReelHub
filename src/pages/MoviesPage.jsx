@@ -2,7 +2,9 @@ import React from 'react'
 
 function MoviesPage() {
   return (
-    <div className='w-full h-screen'></div>
+    <div className='w-full h-screen'>
+
+    </div>
   )
 }
 
