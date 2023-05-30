@@ -10,8 +10,7 @@ function HeroSlide() {
   useEffect(() => {
     const getPopularMovies = async () => {
       const response = await fetch(
-        `https://api.themoviedb.org/3/trending/movie/day?api_key=${
-          import.meta.env.VITE_TMDB_KEY
+        `https://api.themoviedb.org/3/trending/movie/day?api_key=${import.meta.env.VITE_TMDB_KEY
         }&language=en-US&page=1`
       );
       const data = await response.json();
@@ -27,7 +26,7 @@ function HeroSlide() {
         spaceBetween={0}
         slidesPerView={1}
         grabCursor={true}
-        autoplay={{ delay: 4000 }}
+        autoplay={{ delay: 2000 }}
         loop={true}
       >
         {movies.map((item, i) => (

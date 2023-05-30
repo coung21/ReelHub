@@ -1,20 +1,29 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { useLoaderData } from 'react-router-dom'
 import { SiImdb } from 'react-icons/si';
 import minTohr from '../../utils/minTohr'
 import CastList from '../../components/Details/CastList';
 import Trailers from '../../components/Details/Trailers';
 import Similar from '../../components/Details/Similar';
+import { motion, useScroll, useSpring } from "framer-motion";
 
 function MovieDetails() {
   const data = useLoaderData()
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
 
   useEffect(() => {
-    window.scrollTo(0,0)
-  },[data])
+    window.scrollTo(0, 0)
+  }, [data])
   // console.log(data)
   return (
     <>
+      <motion.div className="fixed top-0 left-0 right-0 h-2 bg-red-500 transform origin-left z-50 rounded-xl" style={{ scaleX }} />
       <div
         className='relative
       w-full
@@ -87,7 +96,7 @@ function MovieDetails() {
             <h2 className='text-white text-lg font-semibold font-montserrat mb-2'>
               Casts
             </h2>
-            <CastList id={data.id} path='movie'/>
+            <CastList id={data.id} path='movie' />
           </div>
         </div>
       </div>
@@ -106,11 +115,10 @@ function MovieDetails() {
 
 export default MovieDetails
 
-export async function loader({request, params}){
+export async function loader({ request, params }) {
   const id = params.id
   const resposne = await fetch(
-    `https://api.themoviedb.org/3/movie/${id}?api_key=${
-      import.meta.env.VITE_TMDB_KEY
+    `https://api.themoviedb.org/3/movie/${id}?api_key=${import.meta.env.VITE_TMDB_KEY
     }`
   );
   const data = await resposne.json()

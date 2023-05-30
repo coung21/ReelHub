@@ -5,6 +5,7 @@ import Footer from '../components/Footer/Footer';
 import Buttongoup from '../components/Button/Buttongoup';
 
 function RootLayout() {
+
   return (
     <div className='scroll-smooth'>
       <Header />
