@@ -1,20 +1,46 @@
-import React from 'react';
-import logo2 from '../../../public/logo2.png';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import logo2 from '../../assets/logo2.png';
+import { NavLink, Link } from 'react-router-dom';
+
 
 function Header() {
+  const [trans, setTrans] = useState('')
+  useEffect(() => {
+    function handleScroll(){
+      if(window.scrollY >= 200){
+        setTrans(
+          'transition-all duration-700 bg-bg'
+        );
+      } else {
+        setTrans('')
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   return (
-    <div className='bg-transparent w-full h-20 sm:h-24 fixed z-50 flex justify-between items-center'>
-      <div className='flex items-center gap-2 ml-6 sm:ml-20 hover:cursor-pointer'>
-        <img src={logo2} alt='logo' className='w-14 h-14' />
-        <h1 className='text-white font-montserrat text-xl font-bold hidden sm:inline'>
-          ReelHub
-        </h1>
+    <div
+      className={`${trans} w-full h-16 sm:h-24 fixed z-50 flex justify-between items-center`}
+    >
+      <div className='items-center gap-2 ml-6 md:ml-20 hover:cursor-pointer'>
+        <Link to='/ReelHub'>
+          <img
+            src={logo2}
+            alt='logo'
+            className='w-14 h-14 inline-block mr-0 md:mr  -2'
+          />
+          <h1 className='text-white font-montserrat text-xl font-bold hidden sm:inline'>
+            ReelHub
+          </h1>
+        </Link>
       </div>
-      <ul className='flex mr-6 sm:mr-20 text-white font-lg font-montserrat font-semibold gap-4 sm:gap-7'>
+      <ul className='flex text-white text-sm sm:text-lg font-montserrat font-semibold gap-4 sm:gap-7 mr-6 md:mr-20'>
         <li className=''>
           <NavLink
-            to={'/'}
+            to={'/ReelHub'}
             className={({ isActive }) =>
               isActive
                 ? 'text-primary'
@@ -27,7 +53,7 @@ function Header() {
         </li>
         <li className=''>
           <NavLink
-            to={'movies'}
+            to={'/ReelHub/movie'}
             className={({ isActive }) =>
               isActive
                 ? 'text-primary'
@@ -40,7 +66,7 @@ function Header() {
         </li>
         <li className=''>
           <NavLink
-          to={'tvshows'}
+            to={'/ReelHub/tvshow'}
             className={({ isActive }) =>
               isActive
                 ? 'text-primary'
@@ -52,6 +78,10 @@ function Header() {
           </NavLink>
         </li>
       </ul>
+      {/* <div className='mr-4 md:mr-14 flex gap-1 sm:gap-3'>
+        <Button className='text-sm md:text-lg bg-primary px-[0.5rem] py-[1px]'>Signup</Button>
+        <Button className='text-sm md:text-lg bg-transparent border-2 border-white px-[0.8rem] py-[1px]'>Login</Button>
+      </div> */}
     </div>
   );
 }

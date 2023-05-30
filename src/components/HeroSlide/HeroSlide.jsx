@@ -10,13 +10,13 @@ function HeroSlide() {
   useEffect(() => {
     const getPopularMovies = async () => {
       const response = await fetch(
-        `https://api.themoviedb.org/3/movie/popular?api_key=${
+        `https://api.themoviedb.org/3/trending/movie/day?api_key=${
           import.meta.env.VITE_TMDB_KEY
         }&language=en-US&page=1`
       );
       const data = await response.json();
       setMovies(data.results.slice(0, 6));
-      console.log(data.results.slice(0, 6));
+      // console.log(data.results.slice(0, 6));
     };
     getPopularMovies();
   }, []);
@@ -37,6 +37,7 @@ function HeroSlide() {
               title={item.original_title}
               overview={item.overview}
               poster={item.poster_path}
+              id={item.id}
             />
           </SwiperSlide>
         ))}

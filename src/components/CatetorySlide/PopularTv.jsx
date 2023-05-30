@@ -5,15 +5,15 @@ function PopularTv() {
   const [pTvShows, setpTvShows] = useState([])
   useEffect(() => {
     const getPopularTv = async () => {
-      const resposne = await fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${import.meta.env.VITE_TMDB_KEY}&language=en-US&page=1`)
+      const resposne = await fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${import.meta.env.VITE_TMDB_KEY}&language=en-US&page=2`)
       const data = await resposne.json()
-      setpTvShows(data.results.slice(5))
+      setpTvShows(data.results)
     }
     getPopularTv()
   }, [])
   return (
     <>
-      <Catetory moviesList={pTvShows} catetory='Popular TV Shows'/>
+      <Catetory moviesList={pTvShows} path='tvshow' catetory='Popular TV Shows'/>
     </>
   )
 }

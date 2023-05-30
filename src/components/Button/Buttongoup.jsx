@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
+import { AiOutlineArrowUp } from 'react-icons/ai';
 
 export default function Buttongoup() {
 
@@ -33,7 +34,7 @@ export default function Buttongoup() {
         <div>
             {showButton &&
                 <button
-                    className='fixed right-20 border-2 border-red-500 top-[650px] bg-red-500 rounded-3xl z-20 text-white py-[7px] px-[12px]
+                    className='fixed right-4 border-3 border-red-500 bottom-2 bg-red-500 rounded-2xl z-20 text-white py-[12px] px-[12px]
                     hover:bg-transparent 
                     hover:border-2 
                     hover:border-solid 
@@ -41,7 +42,7 @@ export default function Buttongoup() {
                     transition-all
                     duration-500'
                     onClick={toggleGottoTop}
-                >Go on</button>
+                ><AiOutlineArrowUp /></button>
             }
         </div >
     )
