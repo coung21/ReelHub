@@ -23,7 +23,10 @@ function MovieDetails() {
   // console.log(data)
   return (
     <>
-      <motion.div className="fixed top-0 left-0 right-0 h-2 bg-red-500 transform origin-left z-50 rounded-xl" style={{ scaleX }} />
+      <motion.div
+        className='fixed top-0 left-0 right-0 h-2 bg-red-500 transform origin-left z-50 rounded-xl'
+        style={{ scaleX }}
+      />
       <div
         className='relative
       w-full
@@ -102,7 +105,9 @@ function MovieDetails() {
       </div>
 
       <div className='md:px-20 px-2 mt-[100px]'>
-        <h2 className='text-white font-montserrat font-bold text-xl mb-[20px] ml-4'>Trailer</h2>
+        <h2 className='text-white font-montserrat font-semibold text-md mb-4 sm:text-xl relative ml-4 before:content-[""] before:absolute before:h-full before:w-1 before:bg-primary before:left-[-1rem]'>
+          Trailer
+        </h2>
         <Trailers id={data.id} />
       </div>
 

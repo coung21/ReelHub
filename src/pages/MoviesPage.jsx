@@ -88,7 +88,7 @@ function MoviesPage() {
         </div>
       </div>
 
-      <div className='mt-11 px-6 grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 md:gap-3'>
+      <div className='mt-11 px-6 grid grid-cols-2 min-[464px]:grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 md:gap-3'>
         {!loading && movieList.length > 0 &&
           movieList.map((item) => (
             <motion.div
@@ -132,7 +132,7 @@ function MoviesPage() {
             className='text-white bg-transparent border-white border-2 px-3 py-2 rounded-md mx-auto'
             onClick={loadMoreHanlder}
           >
-            Loade More
+            Load More
           </button>
         </div>
       ) : null}

@@ -12,9 +12,13 @@ function Catetory(props) {
 
   const breakpoints = {
     // Hiển thị 3 slide trên viewport nhỏ hơn 640px
-    640: {
+    320: {
       slidesPerView: 2,
-      spaceBetween: 30,
+      spaceBetween: 10,
+    },
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 15,
     },
     // Hiển thị 4 slide trên viewport từ 768px đến 1024px
     768: {
@@ -31,7 +35,7 @@ function Catetory(props) {
   return (
     <div className='w-full mb-9'>
       <div className='w-full flex justify-between items-center'>
-        <h2 className='text-white font-montserrat font-semibold text-xl relative ml-4 before:content-[""] before:absolute before:h-full before:w-1 before:bg-primary before:left-[-1rem]'>
+        <h2 className='text-white font-montserrat font-semibold text-md sm:text-xl relative ml-4 before:content-[""] before:absolute before:h-full before:w-1 before:bg-primary before:left-[-1rem]'>
           {catetory}
         </h2>
         <SmallButton>
