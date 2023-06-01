@@ -58,6 +58,6 @@ Pull requests are welcome! If you have any feature requests or bug reports, plea
 
 ![screencapture-localhost-5173-2023-05-12-14_26_09](https://github.com/coung21/ReelHub/assets/120638231/ecd36267-7bc2-4200-b6f1-5898a2afbae5)
 
-![screencapture-localhost-5173-movie-603692-2023-05-12-14_27_43](https://github.com/coung21/ReelHub/assets/120638231/b3aca6e3-58f8-4950-b4d8-81a25b8cc5a9)
+![screencapture-localhost-5173-ReelHub-movie-603692-2023-06-01-00_42_41](https://github.com/coung21/ReelHub/assets/120638231/f33e824e-e977-4eda-87c5-9959e543e450)
 
 ![screencapture-localhost-5173-movie-2023-05-12-14_26_51](https://github.com/coung21/ReelHub/assets/120638231/703b2185-89ad-43d8-b871-acf278f7152b)

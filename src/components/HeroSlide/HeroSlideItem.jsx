@@ -60,7 +60,7 @@ function HeroSlideItem({ background, title, overview, poster, id }) {
             <div className='font-montserrat font-normal text-white mt-7 md:mt-12 text-center md:text-left'>
               {overview}
             </div>
-            <div className='mt-7 md:mt-12 flex justify-center md:justify-start gap-5'>
+            <div className='mt-7 md:mt-12 flex justify-center md:justify-start gap-3 sm:gap-5'>
               <Button
                 className={
                   'bg-primary hover:shadow-primary text-xl hover:shadow-sm'
