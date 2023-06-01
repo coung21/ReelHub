@@ -2,9 +2,15 @@ import React, { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { SiImdb } from 'react-icons/si';
 import CastList from '../../components/Details/CastList';
-
+import { motion, useScroll, useSpring } from "framer-motion";
 function TvDetails() {
   const data = useLoaderData();
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -12,6 +18,7 @@ function TvDetails() {
   // console.log(data)
   return (
     <>
+      <motion.div className="fixed top-0 left-0 right-0 h-2 bg-red-500 transform origin-left z-50 rounded-xl" style={{ scaleX }} />
       <div
         className='relative
       w-full
@@ -110,8 +117,7 @@ export default TvDetails;
 export async function loader({ request, params }) {
   const id = params.id;
   const resposne = await fetch(
-    `https://api.themoviedb.org/3/tv/${id}?api_key=${
-      import.meta.env.VITE_TMDB_KEY
+    `https://api.themoviedb.org/3/tv/${id}?api_key=${import.meta.env.VITE_TMDB_KEY
     }`
   );
   const data = await resposne.json();
