@@ -9,13 +9,15 @@ function UpcomingMovies() {
         `https://api.themoviedb.org/3/movie/upcoming?api_key=${import.meta.env.VITE_TMDB_KEY}&language=en-US&page=1`
       );
       const data = await response.json()
-      setUpcomingList(data.results)
+      setTimeout(() => {
+        setUpcomingList(data.results)
+      }, 700)
     }
     getUpcomingMovies()
   }, [])
   return (
     <>
-      <Catetory moviesList={upcomingList} path='movie' catetory='Upcoming Movies'/>
+      <Catetory moviesList={upcomingList} path='movie' catetory='Upcoming Movies' />
     </>
   )
 }
