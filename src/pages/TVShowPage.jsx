@@ -83,7 +83,7 @@ function TVShowPage() {
         </div>
       </div>
 
-      <div className='mt-11 px-6 grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 md:gap-3'>
+      <div className='mt-11 px-6 grid grid-cols-2 min-[464px]:grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 md:gap-3'>
         {!loading && tvList.length > 0 &&
           tvList.map((item) => (
             <motion.div
@@ -124,7 +124,7 @@ function TVShowPage() {
       {page < 6 ? (
         <div className='w-full flex items-center justify-center my-5'>
           <button
-            className='text-white bg-transparent border-white border-2 px-3 py-2 rounded-md mx-auto'
+            className='text-white bg-transparent border-white border-2 px-2 py-1 sm:px-3 sm:py-2 rounded-md mx-auto'
             onClick={loadMoreHanlder}
           >
             Load More
