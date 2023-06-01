@@ -19,3 +19,10 @@
 .swiper-button-next{
   color: red;
 }
+
+@media (max-width: 768px) {
+  .swiper-container .swiper-button-next,
+  .swiper-container .swiper-button-prev {
+    display: none !important;
+  }
+}

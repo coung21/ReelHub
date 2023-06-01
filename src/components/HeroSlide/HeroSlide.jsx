@@ -43,8 +43,9 @@ function HeroSlide() {
   }, []);
   return (
     <div>
-      {!isLoading && movies.length > 0 &&
+      {!isLoading && movies.length > 0 && (
         <Swiper
+          className='swiper-container'
           modules={[Autoplay, Pagination, Virtual]}
           spaceBetween={0}
           slidesPerView={1}
@@ -67,12 +68,11 @@ function HeroSlide() {
             </SwiperSlide>
           ))}
         </Swiper>
-      }
+      )}
 
-
-      {
-        isLoading && movies.length <= 0 &&
+      {isLoading && movies.length <= 0 && (
         <Swiper
+          className='swiper-container'
           modules={[Autoplay, Pagination, Virtual]}
           spaceBetween={0}
           slidesPerView={1}
@@ -83,14 +83,11 @@ function HeroSlide() {
           loop={true}
           virtual
         >
-          <SwiperSlide >
+          <SwiperSlide>
             <HeroSlideItemLoading />
           </SwiperSlide>
-
         </Swiper>
-
-      }
-
+      )}
     </div>
   );
 }

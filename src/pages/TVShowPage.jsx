@@ -50,7 +50,10 @@ function TVShowPage() {
 
   return (
     <>
-      <motion.div className="fixed top-0 left-0 right-0 h-2 bg-red-500 transform origin-left z-50 rounded-xl" style={{ scaleX }} />
+      <motion.div
+        className='fixed top-0 left-0 right-0 h-2 bg-red-500 transform origin-left z-50 rounded-xl'
+        style={{ scaleX }}
+      />
       <div
         className='relative
       w-full
@@ -73,7 +76,7 @@ function TVShowPage() {
       after:h-[100px]
       after:bg-gradient-to-t from-bg to-transparent'
         style={{
-          backgroundImage: `url('/ReelHub/src/assets/bg.jpg')`,
+          backgroundImage: `url('https://ictv.1cdn.vn/thumbs/720x480/2022/12/05/ictvietnam.mediacdn.vn-162041676108402688-2022-11-27-_netflix-16695549643941955374520-0-0-1125-1800-crop-16695549741742062446321.jpeg')`,
         }}
       >
         <div className='h-full w-full flex items-center justify-center relative'>
@@ -84,15 +87,16 @@ function TVShowPage() {
       </div>
 
       <div className='mt-11 px-6 grid grid-cols-2 min-[464px]:grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 md:gap-3'>
-        {!loading && tvList.length > 0 &&
+        {!loading &&
+          tvList.length > 0 &&
           tvList.map((item) => (
             <motion.div
               key={item.id}
               variants={cardVariants}
-              initial="offscreen"
-              whileInView="onscreen"
+              initial='offscreen'
+              whileInView='onscreen'
               viewport={{ amount: 0.2 }}
-              transition={{ type: "spring", delay: 0.1 }}
+              transition={{ type: 'spring', delay: 0.1 }}
             >
               <MovieCard
                 key={item.id}
@@ -102,11 +106,8 @@ function TVShowPage() {
                 path='tvshow'
               />
             </motion.div>
-
-          ))
-        }
-        {loading &&
-
+          ))}
+        {loading && (
           <>
             <MovieCardLoading />
             <MovieCardLoading />
@@ -115,11 +116,15 @@ function TVShowPage() {
             <MovieCardLoading />
             <MovieCardLoading />
             <MovieCardLoading />
+            <MovieCardLoading />
+            <MovieCardLoading />
+            <MovieCardLoading />
+            <MovieCardLoading />
+            <MovieCardLoading />
+            <MovieCardLoading />
+            <MovieCardLoading />
           </>
-
-
-        }
-
+        )}
       </div>
       {page < 6 ? (
         <div className='w-full flex items-center justify-center my-5'>
