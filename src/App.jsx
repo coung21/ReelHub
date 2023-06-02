@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider, ScrollRestoration } from 'react-router-dom'
 
 import Home from './pages/Home'
-import Header from './components/Header/Header'
 import MoviesPage from './pages/MoviesPage';
 import TVShowPage from './pages/TVShowPage';
 import RootLayout from './pages/RootLayout';
