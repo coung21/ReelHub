@@ -5,12 +5,12 @@ import Header from './components/Header/Header'
 import MoviesPage from './pages/MoviesPage';
 import TVShowPage from './pages/TVShowPage';
 import RootLayout from './pages/RootLayout';
-import Movie, {loader as getMovieDetail} from './pages/Detail/MovieDetails';
-import Tv, {loader as getTvDetail} from './pages/Detail/TvDetails';
+import Movie, { loader as getMovieDetail } from './pages/Detail/MovieDetails';
+import Tv, { loader as getTvDetail } from './pages/Detail/TvDetails';
 
 const router = createBrowserRouter([
   {
-    
+
     path: '/ReelHub',
     element: <RootLayout />,
     children: [
@@ -25,6 +25,9 @@ const router = createBrowserRouter([
             index: true,
             element: <MoviesPage />,
           },
+          // Tuyến đường /ReelHub/movie: Đây là một tuyến đường con của /ReelHub. 
+          //Nếu URL khớp với đường dẫn này, MoviesPage sẽ được hiển thị, 
+          //và tuyến đường con trong children sẽ được xem xét.
           {
             path: '/ReelHub/movie/:id',
             element: <Movie />,
@@ -51,7 +54,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router}/>
+  return <RouterProvider router={router} />
 }
 
 export default App
