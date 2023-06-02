@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import SwiperCore, { Autoplay } from 'swiper';
+import SwiperCore, { Autoplay, Virtual, Pagination, Navigation } from 'swiper';
 import HeroSlideItem from './HeroSlideItem';
-import { Virtual } from 'swiper';
-import { Pagination } from 'swiper';
+
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -13,12 +12,12 @@ import 'swiper/css/scrollbar';
 import HeroSlideItemLoading from './HeroSlideItemLoading';
 
 function HeroSlide() {
+  // SwiperCore.use([Autoplay, Virtual, Pagination, Navigation]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [])
 
-  SwiperCore.use([Autoplay]);
   const [movies, setMovies] = useState([]);
 
   const [isLoading, setisLoading] = useState(false)
@@ -46,11 +45,11 @@ function HeroSlide() {
       {!isLoading && movies.length > 0 && (
         <Swiper
           className='swiper-container'
-          modules={[Autoplay, Pagination, Virtual]}
+          modules={[Autoplay, Pagination, Virtual, Navigation]}
           spaceBetween={0}
           slidesPerView={1}
           grabCursor={true}
-          autoplay={{ delay: 2000 }}
+          autoplay={{ delay: 2000, disableOnInteraction: false, pauseOnMouseEnter: true }}
           navigation
           pagination={{ clickable: true }}
           loop={true}
@@ -77,7 +76,7 @@ function HeroSlide() {
           spaceBetween={0}
           slidesPerView={1}
           grabCursor={true}
-          autoplay={{ delay: 2000 }}
+          autoplay={false}
           navigation
           pagination={{ clickable: true }}
           loop={true}
