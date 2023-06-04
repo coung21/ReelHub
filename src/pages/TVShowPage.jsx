@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MovieCard from '../components/MovieCard/MovieCard';
 import MovieCardLoading from '../components/MovieCard/MovieCardLoading';
 import { motion, useScroll, useSpring } from "framer-motion";
+import Footer from '../components/Footer/Footer';
 
 function TVShowPage() {
   const [tvList, setTvList] = useState([]);
@@ -136,6 +137,7 @@ function TVShowPage() {
           </button>
         </div>
       ) : null}
+      <Footer />
     </>
   );
 }

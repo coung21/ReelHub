@@ -1,0 +1,30 @@
+.slide-track{
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    white-space: nowrap;
+    width: 100%;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll{
+    0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+
+}
+/* @keyframes scroll{
+  0% {
+      transform: translateX(0);
+    }
+    50%{
+      transform: translateX(-100%)
+    }
+    100% {
+      transform: translateX(0%);
+    }
+
+} */

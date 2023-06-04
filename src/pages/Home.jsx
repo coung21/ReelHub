@@ -5,6 +5,7 @@ import TopRateMovie from '../components/CatetorySlide/TopRateMovie';
 import PopularTv from '../components/CatetorySlide/PopularTv';
 import TopRatedTv from '../components/CatetorySlide/TopRatedTv';
 import { motion, useScroll, useSpring } from "framer-motion";
+import Footer2 from '../components/Footer/Footer2';
 function Home() {
 
   const { scrollYProgress } = useScroll();
@@ -28,6 +29,7 @@ function Home() {
         <PopularTv />
         <TopRatedTv />
       </div>
+      <Footer2 />
     </motion.div>
 
 
