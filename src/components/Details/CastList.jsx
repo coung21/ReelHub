@@ -52,7 +52,7 @@ function CastList({ id, path }) {
         breakpoints={breakpoints}
         grabCursor={true}
         autoplay={{ delay: 2000, disableOnInteraction: false, pauseOnMouseEnter: true }}
-        navigation={{ clickable: true }}
+        // navigation={{ clickable: true }}
         loop={true}
         virtual
       >
