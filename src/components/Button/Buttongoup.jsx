@@ -34,7 +34,7 @@ export default function Buttongoup() {
         <div>
             {showButton &&
                 <button
-                    className='fixed right-4 border-3 border-red-500 bottom-2 bg-red-500 rounded-2xl z-20 text-white py-[12px] px-[12px]
+                    className='fixed right-4 border-3 border-red-500 bottom-12 bg-red-500 rounded-2xl z-20 text-white py-[12px] px-[12px]
                     hover:bg-transparent 
                     hover:border-2 
                     hover:border-solid 

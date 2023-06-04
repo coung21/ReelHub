@@ -6,6 +6,7 @@ import CastList from '../../components/Details/CastList';
 import Trailers from '../../components/Details/Trailers';
 import Similar from '../../components/Details/Similar';
 import { motion, useScroll, useSpring } from "framer-motion";
+import Footer from '../../components/Footer/Footer';
 
 function MovieDetails() {
   const data = useLoaderData()
@@ -175,6 +176,7 @@ function MovieDetails() {
       <div className='md:px-20 px-2 mt-[100px]'>
         <Similar id={data.id} />
       </div>
+      <Footer />
     </>
   );
 }

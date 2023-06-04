@@ -3,6 +3,8 @@ import MovieCard from '../components/MovieCard/MovieCard';
 import MovieCardLoading from '../components/MovieCard/MovieCardLoading';
 import { motion, useScroll, useSpring } from "framer-motion";
 import i from '../assets/bg.jpg'
+import Footer from '../components/Footer/Footer';
+
 
 function MoviesPage() {
   const [movieList, setMovieList] = useState([]);
@@ -144,6 +146,7 @@ function MoviesPage() {
           </button>
         </div>
       ) : null}
+      <Footer />
     </>
   );
 }

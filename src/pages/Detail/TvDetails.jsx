@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import { SiImdb } from 'react-icons/si';
 import CastList from '../../components/Details/CastList';
 import { motion, useScroll, useSpring } from "framer-motion";
+import Footer from '../../components/Footer/Footer';
 function TvDetails() {
   const data = useLoaderData();
   const { scrollYProgress } = useScroll();
@@ -168,6 +169,7 @@ function TvDetails() {
           ></div>
         </a>
       </div>
+      <Footer />
     </>
   );
 }
