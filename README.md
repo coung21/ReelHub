@@ -17,6 +17,7 @@ https://coung21.github.io/ReelHub/
 ![react](https://github.com/coung21/ReelHub/assets/120638231/cc932e8f-519e-4664-8bfc-7d32f665a918)
 ![react-router (1)](https://github.com/coung21/ReelHub/assets/120638231/e93fa2fe-a1a1-4d2b-b100-536865b40a25)
 ![tailwindcss-icon](https://github.com/coung21/ReelHub/assets/120638231/c2d4b05d-3577-48d0-a599-8adff223cec1)
+<img src="https://framerusercontent.com/images/48ha9ZR9oZQGQ6gZ8YUfElP3T0A.png" width="50" height="50" alt="Framer Motion Icon" />
 
 ## Getting Started
 
