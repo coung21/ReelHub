@@ -6,9 +6,6 @@
     width: 100%;
     animation: scroll 10s linear infinite;
 }
-.slide-track:hover{
-    animation-play-state: paused;
-}
 
 @keyframes scroll{
     0% {
