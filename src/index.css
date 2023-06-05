@@ -17,6 +17,7 @@ html::-webkit-scrollbar-track
 html::-webkit-scrollbar
 {
 	width: 10px;
+  height: 8px;
 	background-color: transparent;
 }
 

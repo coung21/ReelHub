@@ -61,7 +61,7 @@ function Catetory(props) {
           whileInView="onscreen"
           viewport={{ amount: 0.1 }}
           transition={{ type: "spring" }}
-          className='text-white font-montserrat font-semibold text-xl relative ml-4 before:content-[""] before:absolute before:h-full before:w-1 before:bg-primary before:left-[-1rem]'>
+          className='text-white font-montserrat font-semibold text-xl relative mr-3 sm:mr-0 ml-4 before:content-[""] before:absolute before:h-full before:w-1 before:bg-primary before:left-[-1rem]'>
           {catetory}
         </motion.h2>
         <SmallButton>

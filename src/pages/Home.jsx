@@ -21,7 +21,7 @@ function Home() {
 
   return (
     <motion.div>
-      <motion.div className="fixed top-0 left-0 right-0 h-2 bg-red-500 transform origin-left z-50 rounded-xl" style={{ scaleX }} />
+      <motion.div className="fixed top-0 left-0 right-0 h-[0.23rem] sm:h-2 bg-red-500 transform origin-left z-50 rounded-xl" style={{ scaleX }} />
       <HeroSlide />
       <div className='px-12 sm:px-24 py-6 mt-16 w-full'>
         <UpcomingMovies />
