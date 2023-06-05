@@ -50,23 +50,23 @@ export default function Footer2() {
 
                 </div>
                 <div className='relative flex text-white justify-between py-[50px] mobile:flex-col tablet:flex-col'>
-                    <div className='flex items-center w-[30%] mobile:pb-5 tablet:pb-5'><AiFillCheckCircle className='mr-2' /> Available on all platforms</div>
+                    <div className='flex items-center w-[30%] mobile:w-[100%] mobile:pb-5 tablet:pb-5'><AiFillCheckCircle className='mr-2' /> Available on all platforms</div>
                     <div className='flex w-[50%] mobile:w-[100%] tablet:w-[100%] overflow-hidden relative gap-1 tablet:gap-0'>
                         <div className='slide-track'>
-                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><AiFillWindows className='mr-2' /> Windows</button>
-                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><AiFillApple className='mr-2' /> macOs</button>
-                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><FaLinux className='mr-2' /> Linux</button>
-                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'>< AiFillChrome className='mr-2' /> Chrome</button>
-                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><AiFillApple className='mr-2' /> iOS</button>
-                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><AiFillAndroid className='mr-2' /> Android</button>
+                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><AiFillWindows className='mr-2 mobile:mr-0' /> <span className='mobile:hidden'>Windows</span></button>
+                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><AiFillApple className='mr-2 mobile:mr-0' /><span className='mobile:hidden'>macOs</span> </button>
+                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><FaLinux className='mr-2 mobile:mr-0' /> <span className='mobile:hidden'>Linux</span></button>
+                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'>< AiFillChrome className='mr-2 mobile:mr-0' /> <span className='mobile:hidden'>Chrome</span></button>
+                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><AiFillApple className='mr-2 mobile:mr-0' /> <span className='mobile:hidden'>iOS</span></button>
+                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><AiFillAndroid className='mr-2 mobile:mr-0' /> <span className='mobile:hidden'>Android</span></button>
                         </div>
                         <div className="slide-track">
-                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><AiFillWindows className='mr-2' /> Windows</button>
-                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><AiFillApple className='mr-2' /> macOs</button>
-                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><FaLinux className='mr-2' /> Linux</button>
-                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'>< AiFillChrome className='mr-2' /> Chrome</button>
-                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><AiFillApple className='mr-2' /> iOS</button>
-                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><AiFillAndroid className='mr-2' /> Android</button>
+                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><AiFillWindows className='mr-2 mobile:mr-0' /> <span className='mobile:hidden'>Windows</span></button>
+                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><AiFillApple className='mr-2 mobile:mr-0' /><span className='mobile:hidden'>macOs</span> </button>
+                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><FaLinux className='mr-2 mobile:mr-0' /> <span className='mobile:hidden'>Linux</span></button>
+                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'>< AiFillChrome className='mr-2 mobile:mr-0' /> <span className='mobile:hidden'>Chrome</span></button>
+                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><AiFillApple className='mr-2 mobile:mr-0' /> <span className='mobile:hidden'>iOS</span></button>
+                            <button className='flex items-center justify-center w-[120px] h-[40px] border-[#717171] border rounded-[20px]'><AiFillAndroid className='mr-2 mobile:mr-0' /> <span className='mobile:hidden'>Android</span></button>
                         </div>
                     </div>
                 </div>
