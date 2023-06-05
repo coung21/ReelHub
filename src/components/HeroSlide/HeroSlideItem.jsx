@@ -53,7 +53,7 @@ function HeroSlideItem({ background, title, overview, poster, id }) {
         }}
       >
         <div className='flex justify-center items-center relative px-4 sm:px-12 h-full'>
-          <div className='w-full md:w-1/2 px-2 sm:px-12'>
+          <div className='w-full md:w-[50%] px-2 sm:px-12 lg:pl-28'>
             <h2 className='font-montserrat text-white font-bold text-3xl sm:text-4xl text-center md:text-left'>
               {title}
             </h2>
