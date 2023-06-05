@@ -4,7 +4,7 @@
     align-items: center;
     white-space: nowrap;
     width: 100%;
-    animation: scroll 10s linear infinite;
+    animation: scroll 20s linear infinite;
 }
 
 @keyframes scroll{
