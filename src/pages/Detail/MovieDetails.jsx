@@ -137,7 +137,7 @@ function MovieDetails() {
             className='mb-4'>
             <SiImdb color='yellow' size={25} className='inline' />
             <span className='ml-2 text-white text-xl font-semibold opacity-100'>
-              {data.vote_average}
+              {data.vote_average.toFixed(1)}
               <span className='text-sm opacity-50'>/10</span>
             </span>
           </motion.div>
